@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int size;
+    cin>>size;
+    int array[size];
+    for(int i=0;i<size;i++)
+    cin>>array[i];
+    for(int i=0;i<size;i++)
+    {
+        int min_index=i;
+        for(int j=i;j<size;j++)
+        {
+            if(array[j]<array[min_index])
+            min_index=j;
+        }
+       swap(array[i],array[min_index]);
+    }
+    for(int i=0;i<size;i++)
+    cout<<array[i]<<" ";
+}
